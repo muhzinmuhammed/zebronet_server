@@ -17,7 +17,7 @@ const orderSchema = new Schema({
         ref: 'item'
     },
 
-
+    
 
     supplierId: {
         type: Schema.Types.ObjectId,
@@ -36,6 +36,11 @@ const orderSchema = new Schema({
     type: Number,
     required: true
    },
+   netAmount:{
+    type:Number,
+    
+
+},
    status: {
     type: String,
     enum: ['pending', 'delivered', 'cancelled'],

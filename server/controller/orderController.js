@@ -18,7 +18,7 @@ const addOrder = async (req, res) => {
         // Calculate total price using supplier's price
         const price = item.price;
         const totalPrice = qty * price;
-        console.log(price);
+      const netAmount=totalPrice-item.discountPrice
         
 
         // Create a new order object
@@ -29,6 +29,7 @@ const addOrder = async (req, res) => {
             qty,
             price,
             totalPrice,
+            netAmount
         });
 
         // Generate order number
